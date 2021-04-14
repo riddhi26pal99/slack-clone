@@ -1,4 +1,12 @@
+* {
+  margin: 0;
+}
+
 body {
+  --slack-color: rgb(58, 8, 58);
+  overflow: hidden;
+  
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
