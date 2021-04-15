@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
+import styled from 'styled-components'
+
 import Header from './Components/Header'
+import SideBar from './Components/SideBar'
 
 import {
   BrowserRouter as Router,
@@ -14,17 +17,14 @@ function App() {
     <div className="app">
       <Router>
       <>
-        <Switch>
-          {/*<Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>*/}
-          <Route path="/" exact>
-            <Header />
-          </Route>
-        </Switch>
+        <Header />
+        <AppBody>
+          <SideBar />
+          <Switch>
+            <Route path="/" exact>
+            </Route>
+          </Switch>
+        </AppBody>
       </>
     </Router>
     </div>
@@ -32,3 +32,8 @@ function App() {
 }
 
 export default App;
+
+const AppBody = styled.div`
+  display: flex;
+  height: 100vh;
+`;

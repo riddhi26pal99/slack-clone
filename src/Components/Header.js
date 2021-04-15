@@ -2,10 +2,12 @@ import styled from 'styled-components'
 import {Avatar} from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 function Header() {
     return (
         <HeaderContainer>
+
             {/*Header Left */}
             <HeaderLeft>
                 <HeaderAvatar 
@@ -13,11 +15,17 @@ function Header() {
                 />
                 <AccessTimeIcon />
             </HeaderLeft>
+
             {/*Header search */}
             <HeaderSearch>
                 <SearchIcon />
+                <input placeholder='search' />
             </HeaderSearch>
+            
             {/*Header Right */}
+            <HeaderRight>
+                <HelpOutlineIcon />
+            </HeaderRight>
         </HeaderContainer>
     )
 }
@@ -42,8 +50,8 @@ const HeaderLeft = styled.div`
     margin-left: 30px;
 
     > .MuiSvgIcon-root {
-        margin-left: 120px;
-        margin-right: 20px;
+        margin-left: auto;
+        margin-right: 30px;
     }
 `;
 
@@ -56,5 +64,34 @@ const HeaderAvatar = styled(Avatar)`
 `;
 
 const HeaderSearch = styled.div`
+    flex: 0.4;
+    display: flex;
+    opacity: 1;
+    border-radius: 6px;
+    background-color: #421f44;
+    text-align: center;
+    margin-right: 400px;
+    border: .5px gray solid;
+    color: gray;
+    padding: 0 50px;
 
+    > input {
+        background-color: transparent;
+        text-align: center;
+        outline: none;
+        min-width: 30vw;
+        color: white;
+        border: none;
+    }
+`;
+
+const HeaderRight = styled.div`
+    flex: 0.3;
+    display: flex;
+    align-items: flex-end;
+
+     > .MuiSvgIcon-root {
+        margin-left: auto;
+        margin-right: 20px;
+    }
 `;
