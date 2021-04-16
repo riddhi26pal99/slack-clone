@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import Header from './Components/Header'
 import SideBar from './Components/SideBar'
+import Chat from './Components/Chat'
 
 import {
   BrowserRouter as Router,
@@ -22,6 +23,7 @@ function App() {
           <SideBar />
           <Switch>
             <Route path="/" exact>
+            <Chat />
             </Route>
           </Switch>
         </AppBody>
